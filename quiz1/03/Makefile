@@ -1,21 +1,22 @@
 CC=gcc
-SRC=main.c
 DST=main
-
+CFLAGS += -Werror
 OBJS:=
 OBJS += main.o
-OBJS += item.o
+OBJS += xor.o
+
 
 %.o: %.c
-	$(CC) -c -o $@ $<
+	$(CC) -c -o $@ $< $(CFLAGS)
 
 build: $(OBJS)
-	$(CC) -o $(DST) $^
+	$(CC) -o $(DST) $^ $(CFLAGS)
 
 run: build
 	./$(DST)
-	
+
 format:
 	clang-format -i *.[ch]
+
 clean:
 	rm -rf $(OBJS) $(DST)
