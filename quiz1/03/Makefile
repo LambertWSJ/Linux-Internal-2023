@@ -3,7 +3,6 @@ DST=main
 CFLAGS += -Werror
 OBJS:=
 OBJS += main.o
-OBJS += xor.o
 
 
 %.o: %.c

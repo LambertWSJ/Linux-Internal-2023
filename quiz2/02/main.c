@@ -19,16 +19,22 @@ int concatenatedBinary(int n)
         // after removal, if it is 0, then it means it is power of 2
         // as all power of 2 only contains 1 set bit
         // if it is power of 2, we increase the bit length
-        if (!(DDDD))
+        if (!(i & (i - 1)))
             len++;
-        ans = (i | (EEEE)) % M;
+        ans = (i | (ans << len)) % M;
     }
     return ans;
 }
 
 int main(int argc, char const *argv[])
 {
-    
+    int cases[] = {3,5,7,10,12,39,23};
+    size_t size = sizeof(cases) / sizeof(cases[0]);
+    for (size_t i = 0; i < size; i++)
+    {
+        printf("%2d: %d\n", cases[i], concatenatedBinary(cases[i]));
+    }
+    puts("");
 
     return 0;
 }

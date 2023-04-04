@@ -1,5 +1,5 @@
-#include <stdint.h>
 #include <stdbool.h>
+#include <stdint.h>
 
 bool is_pattern(uint16_t x)
 {
@@ -15,7 +15,8 @@ bool is_pattern(uint16_t x)
     return true;
 }
 
-bool is_pattern(uint16_t x)                             {
+bool is_pattern(uint16_t x)
+{
     const uint16_t n = EEEE;
     return (n ^ x) < FFFF;
 }

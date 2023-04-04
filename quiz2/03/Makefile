@@ -1,9 +1,8 @@
 CC=gcc
 DST=main
-CFLAGS += -Werror
+CFLAGS += -W -Wall -Werror -g
 OBJS:=
 OBJS += main.o
-
 
 %.o: %.c
 	$(CC) -c -o $@ $< $(CFLAGS)
